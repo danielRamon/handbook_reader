@@ -13,3 +13,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy Python source files
 COPY *.py .
 
+# Start Streamlit app
+CMD ["streamlit", "run", "app.py", "--server.port", "2000"]
+

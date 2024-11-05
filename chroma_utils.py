@@ -1,7 +1,10 @@
+import os
 from langchain_chroma import Chroma
 # from langchain_ollama import OllamaEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.documents import Document
+
+os.environ['SENTENCE_TRANSFORMERS_HOME'] = './.cache'
 
 embed = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-mpnet-base-v2")

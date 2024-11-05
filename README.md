@@ -4,5 +4,5 @@ emoji: 📖
 colorFrom: blue
 colorTo: grey
 sdk: docker
-app_port: 2000  
+app_port: 2000 
 ---

@@ -1,9 +1,14 @@
 from langchain_chroma import Chroma
-from langchain_ollama import OllamaEmbeddings
+# from langchain_ollama import OllamaEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.documents import Document
 
-embed = OllamaEmbeddings(
-    model="jina/jina-embeddings-v2-base-es")  # Initialize embeddings
+embed = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/all-mpnet-base-v2")
+
+
+# embed = OllamaEmbeddings(
+#     model="jina/jina-embeddings-v2-base-es")  # Initialize embeddings
 
 
 def save_handbook_to_chroma(handbook_data: list) -> bool:
@@ -16,9 +21,6 @@ def save_handbook_to_chroma(handbook_data: list) -> bool:
     Returns:
         bool: True if the handbook is saved correctly, False otherwise.
     """
-    embeddings = OllamaEmbeddings(
-        model="llama3.1",
-    )
 
     documents = []
     for chapter in handbook_data:

@@ -63,9 +63,3 @@ def ask_chroma(question: str, k: int = 3) -> dict:
     except Exception as e:
         print(f"Error asking Chroma: {e}")
         return {}
-
-
-# similars = ask_chroma(
-#     "¿Quienes asisten al consejo de barrio?", 2)
-# for similar in similars:
-#     print(similar.page_content+"\n"*3)

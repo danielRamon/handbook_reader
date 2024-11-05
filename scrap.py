@@ -102,5 +102,6 @@ def update_handbook_data(handbook_url):
     save_handbook_to_chroma(handbook_data)
 
 
-update_handbook_data(
-    "https://www.churchofjesuschrist.org/study/manual/general-handbook?lang=spa")
+if __name__ == '__main__':
+    update_handbook_data(
+        "https://www.churchofjesuschrist.org/study/manual/general-handbook?lang=spa")

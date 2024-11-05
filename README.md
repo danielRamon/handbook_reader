@@ -2,7 +2,7 @@
 title: Handbook Reader
 emoji: 📖
 colorFrom: blue
-colorTo: grey
+colorTo: gray
 sdk: docker
 app_port: 2000 
 ---
